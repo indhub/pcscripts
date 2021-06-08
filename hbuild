@@ -3,7 +3,7 @@
 set -e
 
 help_fn() {
-  echo "Usage: pcbuild --src <src_path> --container <enroot_container_name> --script <build_script_name>"
+  echo "Usage: hbuild --src <src_path> --container <enroot_container_name> --script <build_script_name>"
 }
 
 while [[ $# -gt 0 ]]; do

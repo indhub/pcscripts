@@ -41,5 +41,6 @@ srun nvidia-modprobe -u -c=0
 srun -n $num_tasks --container-name ${container_name} \
   --container-mount-home --no-container-remap-root --container-workdir $HOME \
   --container-mounts ${script_dir}:/pcscripts,/scratch:/scratch,/fsx:/fsx \
-  --cpus-per-task ${num_cpus_per_task} --mpi=pmix --unbuffered /pcscripts/runwithenvvars \
+  --cpus-per-task ${num_cpus_per_task} --mpi=pmix --unbuffered --label \
+  /pcscripts/runwithenvvars \
   smddprun -c /opt/conda $@

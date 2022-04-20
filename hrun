@@ -29,4 +29,4 @@ done
 
 script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
-salloc -N 2 --exclusive bash exec_inside_alloc.sh -N $num_nodes --container $container_name --script_dir $script_dir $@
+salloc -N $num_nodes --exclusive bash exec_inside_alloc.sh -N $num_nodes --container $container_name --script_dir $script_dir $@

@@ -34,4 +34,4 @@ done
 
 srun -N 1 --cpus-per-task 32 --pty \
   enroot start --rw --root -m ${src_path}:/herring ${container_name} \
-  bash -c "cd /herring && bash ${build_script}"
+  bash -c "cd . && cd /herring && bash ${build_script}"
